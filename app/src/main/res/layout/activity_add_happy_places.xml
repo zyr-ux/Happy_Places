@@ -139,7 +139,9 @@
                 android:hint="Location"
                 android:inputType="textCapSentences"
                 android:textColor="@color/black"
-                android:textCursorDrawable="@null" />
+                android:textCursorDrawable="@null"
+                android:focusable="false"
+                android:focusableInTouchMode="false"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 

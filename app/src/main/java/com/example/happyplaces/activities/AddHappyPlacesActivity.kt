@@ -45,7 +45,11 @@ import java.util.Locale
 import java.util.UUID
 import com.example.happyplaces.database.*
 import com.google.android.libraries.places.api.Places
+import com.google.android.libraries.places.api.model.Place
+import com.google.android.libraries.places.widget.Autocomplete
+import com.google.android.libraries.places.widget.model.AutocompleteActivityMode
 import kotlinx.coroutines.launch
+import java.lang.Exception
 
 
 class AddHappyPlacesActivity : AppCompatActivity(), View.OnClickListener
@@ -77,6 +81,7 @@ class AddHappyPlacesActivity : AppCompatActivity(), View.OnClickListener
         happyPlacesdao = (application as HappyPlacesApp).db.happyPlacesDao()
         binding?.dateEt?.setOnClickListener(this)
         binding?.addImg?.setOnClickListener(this)
+        binding?.locationEt?.setOnClickListener(this)
 
         if (intent.hasExtra("ID"))
         {
@@ -205,6 +210,15 @@ class AddHappyPlacesActivity : AppCompatActivity(), View.OnClickListener
                     }
                 }
                 pictureAlertDialogue.show()
+            }
+            R.id.location_et->{
+                try {
+                    val fields= listOf(Place.Field.ID,Place.Field.NAME,Place.Field.LAT_LNG,Place.Field.ADDRESS)
+                    val intent=Autocomplete.IntentBuilder(AutocompleteActivityMode.FULLSCREEN,fields).build(this@AddHappyPlacesActivity)
+                    startActivityForResult(intent, PLACE_AUTOCOMPLETE_REQUEST_CODE)
+                }catch (e:Exception){
+                    e.printStackTrace()
+                }
             }
         }
     }
@@ -347,6 +361,12 @@ class AddHappyPlacesActivity : AppCompatActivity(), View.OnClickListener
                     Toast.makeText(this, "Image capture failed", Toast.LENGTH_SHORT).show()
                 }
             }
+            else if (requestCode == PLACE_AUTOCOMPLETE_REQUEST_CODE){
+                val place:Place=Autocomplete.getPlaceFromIntent(data!!)
+                binding?.locationEt?.setText(place.address)
+                latittude=place.latLng.latitude
+                longitude= place.latLng.longitude
+            }
         }
     }
 
@@ -388,6 +408,7 @@ class AddHappyPlacesActivity : AppCompatActivity(), View.OnClickListener
         private const val GALLERY = 1
         private const val CAMERA = 2
         private const val IMAGE_DIRECTORY = "HappyPlacesImages"
+        private const val PLACE_AUTOCOMPLETE_REQUEST_CODE=3
     }
     
 }
