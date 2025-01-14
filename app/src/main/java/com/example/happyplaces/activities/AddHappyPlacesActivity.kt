@@ -44,6 +44,7 @@ import java.util.Date
 import java.util.Locale
 import java.util.UUID
 import com.example.happyplaces.database.*
+import com.google.android.libraries.places.api.Places
 import kotlinx.coroutines.launch
 
 
@@ -94,6 +95,10 @@ class AddHappyPlacesActivity : AppCompatActivity(), View.OnClickListener
                 addHappyPlace(happyPlacesdao)
                 finish()
             }
+        }
+
+        if(!Places.isInitialized()){
+            Places.initialize(this@AddHappyPlacesActivity,resources.getString(R.string.google_maps_api_key))
         }
     }
 
