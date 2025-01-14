@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.lifecycleScope
+import com.bumptech.glide.Glide
 import com.example.happyplaces.R
 import com.example.happyplaces.database.HappyPlaceEntity
 import com.example.happyplaces.database.HappyPlacesApp
@@ -69,7 +70,11 @@ class HappyPlaceDetailsActivity : AppCompatActivity()
     private fun happyPlacesDetails(happyPlaceEntity:HappyPlaceEntity)
     {
         binding?.actionBarPlaceDetails?.setTitle(happyPlaceEntity.title)
-        binding?.happyPlaceIMG?.setImageURI(Uri.parse(happyPlaceEntity.img))
+        val imgfile=happyPlaceEntity.img
+        Glide.with(this@HappyPlaceDetailsActivity)
+            .load(imgfile)
+            .into(binding!!.happyPlaceIMG)
+        //binding?.happyPlaceIMG?.setImageURI(Uri.parse(happyPlaceEntity.img))
         binding?.happyPlaceDesc?.setText(happyPlaceEntity.description)
         binding?.happyPlaceLocation?.setText(happyPlaceEntity.location)
     }
