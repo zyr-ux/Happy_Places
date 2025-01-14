@@ -82,13 +82,8 @@ class MainActivity : AppCompatActivity()
 
         val editSwipeHandler=object :SwipeToEditCallback(this){
             override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
-                Log.d("SwipeEdit", "Swiped at position: ${viewHolder.adapterPosition}")
-                val position=viewHolder.adapterPosition
                 val adapter=binding?.RVMain?.adapter as MainPageAdapter
-                if (position != RecyclerView.NO_POSITION) {
-                    adapter.notifyEditItem(this@MainActivity,viewHolder.adapterPosition, ADD_PLACE_ACTIVITY_REQUEST_CODE)
-                }
-
+                adapter.notifyEditItem(this@MainActivity,viewHolder.adapterPosition, ADD_PLACE_ACTIVITY_REQUEST_CODE)
             }
         }
         val editItemTouchHelper = ItemTouchHelper(editSwipeHandler)
@@ -96,7 +91,6 @@ class MainActivity : AppCompatActivity()
 
         val deleteSwipeHandler= object : SwipeToDeleteCallback(this){
             override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
-                Log.d("SwipeDelete", "Swiped at position: ${viewHolder.adapterPosition}")
                 val adapter=binding?.RVMain?.adapter as MainPageAdapter
                 lifecycleScope.launch {
                     adapter.deleteItem(happyPlacesdao, viewHolder.adapterPosition)

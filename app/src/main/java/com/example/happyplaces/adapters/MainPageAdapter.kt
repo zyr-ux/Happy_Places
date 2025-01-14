@@ -26,15 +26,12 @@ class MainPageAdapter(private val context:Context,
         val desc=binding.tvDesc
         val happyPlaceCard=binding.happyPlaceCard
 
-
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder
     {
         return ViewHolder(RvItemViewBinding.inflate(LayoutInflater.from(parent.context),parent,false))
     }
-
-
 
     override fun getItemCount(): Int
     {
@@ -54,10 +51,6 @@ class MainPageAdapter(private val context:Context,
             .into(holder.ivPlaces)
         holder.happyPlaceCard.setOnClickListener{
             cardClickListener.invoke(item.id)
-        }
-        //Log.d("Adapter", "Binding item at position: $position")
-        if (position == 10) {
-            Log.d("Adapter", "Data for position 10: $item")
         }
     }
 

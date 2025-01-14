@@ -3,6 +3,7 @@ package com.example.happyplaces.activities
 import android.net.Uri
 import android.os.Bundle
 import android.text.Layout
+import android.util.Log
 import android.view.LayoutInflater
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -37,6 +38,7 @@ class HappyPlaceDetailsActivity : AppCompatActivity()
         actionBar()
         happyPlacesdao = (application as HappyPlacesApp).db.happyPlacesDao()
         id=intent.getIntExtra("ID",1)
+        Log.e("onClick ID","$id")
         lifecycleScope.launch {
             happyPlacesdao.fetchHappyPlacebyID(id!!).collect{
                 happyPlacesDetails(it)

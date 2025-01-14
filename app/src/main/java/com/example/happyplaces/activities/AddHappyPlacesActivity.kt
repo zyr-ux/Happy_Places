@@ -80,10 +80,11 @@ class AddHappyPlacesActivity : AppCompatActivity(), View.OnClickListener
         if (intent.hasExtra("ID"))
         {
             editmode=true
-            id = intent.getIntExtra("ID", 0) + 1
-            Log.e("ID","$id")
+            id = intent.getIntExtra("ID", 0)
+            Log.e("edit ID","$id")
             lifecycleScope.launch {
                 happyPlacesdao.fetchHappyPlacebyID(id!!).collect {
+                    Log.e("E","$it")
                     onEdit(id!!,it,happyPlacesdao)
                 }
             }
