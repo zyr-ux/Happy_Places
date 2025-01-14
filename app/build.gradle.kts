@@ -2,7 +2,6 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     id("org.jetbrains.kotlin.kapt")
-    alias(libs.plugins.google.android.libraries.mapsplatform.secrets.gradle.plugin)
 }
 
 android {
@@ -55,7 +54,7 @@ dependencies {
 
     implementation("com.google.android.libraries.places:places:4.1.0") //Places dependency
 
-    implementation(libs.play.services.maps)
+    //implementation(libs.play.services.maps)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
