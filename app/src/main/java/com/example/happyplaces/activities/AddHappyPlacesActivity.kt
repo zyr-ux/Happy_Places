@@ -213,7 +213,7 @@ class AddHappyPlacesActivity : AppCompatActivity(), View.OnClickListener
             }
             R.id.location_et->{
                 try {
-                    val fields= listOf(Place.Field.ID,Place.Field.NAME,Place.Field.LAT_LNG,Place.Field.ADDRESS)
+                    val fields= listOf(Place.Field.ID,Place.Field.DISPLAY_NAME,Place.Field.LOCATION,Place.Field.FORMATTED_ADDRESS)
                     val intent=Autocomplete.IntentBuilder(AutocompleteActivityMode.FULLSCREEN,fields).build(this@AddHappyPlacesActivity)
                     startActivityForResult(intent, PLACE_AUTOCOMPLETE_REQUEST_CODE)
                 }catch (e:Exception){
@@ -363,9 +363,9 @@ class AddHappyPlacesActivity : AppCompatActivity(), View.OnClickListener
             }
             else if (requestCode == PLACE_AUTOCOMPLETE_REQUEST_CODE){
                 val place:Place=Autocomplete.getPlaceFromIntent(data!!)
-                binding?.locationEt?.setText(place.address)
-                latittude=place.latLng.latitude
-                longitude= place.latLng.longitude
+                binding?.locationEt?.setText(place.formattedAddress)
+                latittude=place.location.latitude
+                longitude= place.location.longitude
             }
         }
     }
