@@ -365,7 +365,6 @@ class AddHappyPlacesActivity : AppCompatActivity(), View.OnClickListener
                 binding?.locationEt?.text?.clear()
                 binding?.dateEt?.text?.clear()
                 binding?.addedimgbox?.setImageBitmap(null)
-
             }
         }
         else
