@@ -82,9 +82,7 @@ class AddHappyPlacesActivity : AppCompatActivity(), View.OnClickListener
         binding?.dateEt?.setOnClickListener(this)
         binding?.addImg?.setOnClickListener(this)
         binding?.locationEt?.setOnClickListener(this)
-
-        if (intent.hasExtra("ID"))
-        {
+        if (intent.hasExtra("ID")) {
             editmode=true
             id = intent.getIntExtra("ID", 0)
             Log.e("edit ID","$id")
@@ -101,7 +99,6 @@ class AddHappyPlacesActivity : AppCompatActivity(), View.OnClickListener
                 finish()
             }
         }
-
         if(!Places.isInitialized()){
             Places.initialize(this@AddHappyPlacesActivity,resources.getString(R.string.google_maps_api_key))
         }

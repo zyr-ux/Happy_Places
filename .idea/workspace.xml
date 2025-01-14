@@ -38,11 +38,11 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b92f83fd-675f-4903-a2dc-9172a8028a47" name="Changes" comment="minor stuff">
+    <list default="true" id="b92f83fd-675f-4903-a2dc-9172a8028a47" name="Changes" comment="cleaned up stuff">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/happyplaces/activities/AddHappyPlacesActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/happyplaces/activities/AddHappyPlacesActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/happyplaces/activities/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/happyplaces/activities/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/happyplaces/adapters/MainPageAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/happyplaces/adapters/MainPageAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +62,9 @@
     <system id="GRADLE">
       <state>
         <task path="$PROJECT_DIR$/app">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$">
           <activation />
         </task>
         <projects_view>
@@ -126,7 +129,7 @@
   }
 }</component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="_Designer_Tab" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -141,6 +144,8 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Android App.app.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Download Sources.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.HappyPlaces [signingreport].executor&quot;: &quot;Run&quot;,
     &quot;PROJECT_TRUSTED_KEY&quot;: &quot;true&quot;,
     &quot;ResourceManagerPrefKey.ResourceType&quot;: &quot;DRAWABLE&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
@@ -152,7 +157,7 @@
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/Files/Android/Projects/HappyPlaces/app/src/main/res/layout&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/Files/Android/Projects/RoomDemo&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
   }
@@ -173,8 +178,16 @@
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
       <recent name="com.example.happyplaces.utils" />
     </key>
+    <key name="android.template.-1924448246">
+      <recent name="com.example.happyplaces.activities" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="gradle signingreport" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Android App.app">
     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
       <module name="Happy_Places.app" />
       <option name="ANDROID_RUN_CONFIGURATION_SCHEMA_VERSION" value="1" />
@@ -246,6 +259,33 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="HappyPlaces [signingreport]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="signingreport" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.HappyPlaces [signingreport]" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -352,8 +392,75 @@
       <option name="project" value="LOCAL" />
       <updated>1736843146050</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="minor stuff">
+      <option name="closed" value="true" />
+      <created>1736848233044</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1736848233044</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Fixed major bug relating to how editing entries were being handled">
+      <option name="closed" value="true" />
+      <created>1736868683264</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1736868683264</updated>
+    </task>
+    <task id="LOCAL-00015" summary="adding Google Places">
+      <option name="closed" value="true" />
+      <created>1736875543885</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1736875543885</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Added the functionality to use Google Places to add location">
+      <option name="closed" value="true" />
+      <created>1736876752522</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1736876752522</updated>
+    </task>
+    <task id="LOCAL-00017" summary="updated some stuff">
+      <option name="closed" value="true" />
+      <created>1736877860469</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1736877860469</updated>
+    </task>
+    <task id="LOCAL-00018" summary="using Glide to minimize memory consumption when loading images in Details View">
+      <option name="closed" value="true" />
+      <created>1736877932017</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1736877932017</updated>
+    </task>
+    <task id="LOCAL-00019" summary="cleaned up stuff">
+      <option name="closed" value="true" />
+      <created>1736878567696</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1736878567696</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <ignored-roots>
@@ -365,19 +472,25 @@
     <MESSAGE value="nothing" />
     <MESSAGE value="idk" />
     <MESSAGE value="minor stuff" />
-    <option name="LAST_COMMIT_MESSAGE" value="minor stuff" />
+    <MESSAGE value="Fixed major bug relating to how editing entries were being handled" />
+    <MESSAGE value="adding Google Places" />
+    <MESSAGE value="Added the functionality to use Google Places to add location" />
+    <MESSAGE value="updated some stuff" />
+    <MESSAGE value="using Glide to minimize memory consumption when loading images in Details View" />
+    <MESSAGE value="cleaned up stuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="cleaned up stuff" />
   </component>
   <component name="play_dynamic_filters_status">
     <option name="appIdToCheckInfo">
       <map>
         <entry key="com.example.happyplaces">
           <value>
-            <CheckInfo lastCheckTimestamp="1736774821159" />
+            <CheckInfo lastCheckTimestamp="1736873110424" />
           </value>
         </entry>
         <entry key="com.example.happyplaces.test">
           <value>
-            <CheckInfo lastCheckTimestamp="1736774821159" />
+            <CheckInfo lastCheckTimestamp="1736873110417" />
           </value>
         </entry>
       </map>

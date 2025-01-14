@@ -44,6 +44,7 @@ class MainActivity : AppCompatActivity()
         lifecycleScope.launch {
             happyPlacesdao.fetchAllHappyPlaces().collect{ list ->
                 val list=ArrayList(list)
+
                 setupDataintoRV(list)
             }
         }
@@ -64,13 +65,14 @@ class MainActivity : AppCompatActivity()
     {
         if(happyPlacesList.isNotEmpty())
         {
-            binding?.defaultTv?.visibility= View.GONE
+            binding?.RVMain?.visibility=View.VISIBLE // chatting with ssr fixed this
+            binding?.defaultTv?.visibility= View.INVISIBLE
+            Log.e("List State","${happyPlacesList.isNotEmpty()}")
             val mainPageAdapter=MainPageAdapter(this@MainActivity,happyPlacesList,
                 {
                         selectedID->
                     cardClickListener(selectedID)
                 })
-
             binding?.RVMain?.layoutManager=LinearLayoutManager(this)
             binding?.RVMain?.adapter=mainPageAdapter
         }
@@ -99,7 +101,6 @@ class MainActivity : AppCompatActivity()
         }
         val deleteItemTouchHelper=ItemTouchHelper(deleteSwipeHandler)
         deleteItemTouchHelper.attachToRecyclerView(binding?.RVMain)
-
     }
 
     private fun cardClickListener(id:Int)
