@@ -56,9 +56,10 @@ class MainPageAdapter(private val context:Context,
 
     fun notifyEditItem(activity:Activity,position: Int,requextCode:Int)
     {
+        val entityID=items[position].id
         val intent=Intent(context,AddHappyPlacesActivity::class.java)
-        intent.putExtra("ID",position)
-        Log.e("Position","$position")
+        intent.putExtra("ID",entityID)
+        Log.e("ID","$entityID")
         activity.startActivityForResult(intent,requextCode)
         notifyItemChanged(position)
     }

@@ -375,8 +375,6 @@ class AddHappyPlacesActivity : AppCompatActivity(), View.OnClickListener
     override fun onDestroy()
     {
         super.onDestroy()
-        defaultView()
-
         binding=null
     }
 
