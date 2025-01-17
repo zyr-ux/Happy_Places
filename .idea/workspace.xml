@@ -38,7 +38,10 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b92f83fd-675f-4903-a2dc-9172a8028a47" name="Changes" comment="fixed a bug which was preventing the recycler view to load the 1st time after adding an item" />
+    <list default="true" id="b92f83fd-675f-4903-a2dc-9172a8028a47" name="Changes" comment="idk">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/happyplaces/activities/HappyPlaceDetailsActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/happyplaces/activities/HappyPlaceDetailsActivity.kt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,7 +50,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=PhysicalDevice, isTemplate=false, identifier=serial=4e84ac2)]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -451,7 +454,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736884035002</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="idk">
+      <option name="closed" value="true" />
+      <created>1736886693344</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1736886693344</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -473,7 +484,6 @@
     <MESSAGE value="fixed a small issue in main activity layout" />
     <MESSAGE value="Fixed major bug that was preventing items at position 10 to not be able to get swiped" />
     <MESSAGE value="nothing" />
-    <MESSAGE value="idk" />
     <MESSAGE value="minor stuff" />
     <MESSAGE value="Fixed major bug relating to how editing entries were being handled" />
     <MESSAGE value="adding Google Places" />
@@ -482,7 +492,8 @@
     <MESSAGE value="using Glide to minimize memory consumption when loading images in Details View" />
     <MESSAGE value="cleaned up stuff" />
     <MESSAGE value="fixed a bug which was preventing the recycler view to load the 1st time after adding an item" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed a bug which was preventing the recycler view to load the 1st time after adding an item" />
+    <MESSAGE value="idk" />
+    <option name="LAST_COMMIT_MESSAGE" value="idk" />
   </component>
   <component name="play_dynamic_filters_status">
     <option name="appIdToCheckInfo">
