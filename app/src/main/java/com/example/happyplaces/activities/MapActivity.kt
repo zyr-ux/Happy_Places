@@ -73,7 +73,8 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback
         supportMapFragment.getMapAsync(this)
     }
 
-    override fun onMapReady(maps: GoogleMap) {
+    override fun onMapReady(maps: GoogleMap)
+    {
         val position=LatLng(entity!!.latitude,entity!!.longitude)
         maps.addMarker(MarkerOptions().position(position))
         val latlngZoom= CameraUpdateFactory.newLatLngZoom(position,13f)
