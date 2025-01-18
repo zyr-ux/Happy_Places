@@ -43,11 +43,13 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b92f83fd-675f-4903-a2dc-9172a8028a47" name="Changes" comment="Changed app Icon">
+    <list default="true" id="b92f83fd-675f-4903-a2dc-9172a8028a47" name="Changes" comment="minor stuff">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/.cxx/Debug/5i3r3619/arm64-v8a/configure_fingerprint.bin" beforeDir="false" afterPath="$PROJECT_DIR$/app/.cxx/Debug/5i3r3619/arm64-v8a/configure_fingerprint.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/Debug/5i3r3619/armeabi-v7a/configure_fingerprint.bin" beforeDir="false" afterPath="$PROJECT_DIR$/app/.cxx/Debug/5i3r3619/armeabi-v7a/configure_fingerprint.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/.cxx/Debug/5i3r3619/x86/configure_fingerprint.bin" beforeDir="false" afterPath="$PROJECT_DIR$/app/.cxx/Debug/5i3r3619/x86/configure_fingerprint.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/Debug/5i3r3619/x86_64/configure_fingerprint.bin" beforeDir="false" afterPath="$PROJECT_DIR$/app/.cxx/Debug/5i3r3619/x86_64/configure_fingerprint.bin" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -545,7 +547,23 @@
       <option name="project" value="LOCAL" />
       <updated>1737237498793</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="minor stuff">
+      <option name="closed" value="true" />
+      <created>1737238207799</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1737238207799</updated>
+    </task>
+    <task id="LOCAL-00032" summary="minor stuff">
+      <option name="closed" value="true" />
+      <created>1737238299449</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1737238299449</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -566,7 +584,6 @@
     <MESSAGE value="idk man" />
     <MESSAGE value="fixed a small issue in main activity layout" />
     <MESSAGE value="Fixed major bug that was preventing items at position 10 to not be able to get swiped" />
-    <MESSAGE value="minor stuff" />
     <MESSAGE value="Fixed major bug relating to how editing entries were being handled" />
     <MESSAGE value="adding Google Places" />
     <MESSAGE value="Added the functionality to use Google Places to add location" />
@@ -583,7 +600,8 @@
     <MESSAGE value="Cpp required files" />
     <MESSAGE value="Secured keys (again)" />
     <MESSAGE value="Changed app Icon" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed app Icon" />
+    <MESSAGE value="minor stuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="minor stuff" />
   </component>
   <component name="play_dynamic_filters_status">
     <option name="appIdToCheckInfo">
