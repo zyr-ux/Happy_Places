@@ -1,3 +1,0 @@
-E:/Files/Android/Projects/HappyPlaces/app/.cxx/Debug/5i3r3619/x86/CMakeFiles/native-lib.dir
-E:/Files/Android/Projects/HappyPlaces/app/.cxx/Debug/5i3r3619/x86/CMakeFiles/edit_cache.dir
-E:/Files/Android/Projects/HappyPlaces/app/.cxx/Debug/5i3r3619/x86/CMakeFiles/rebuild_cache.dir

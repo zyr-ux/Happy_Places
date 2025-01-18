@@ -1,1 +1,0 @@
-E:\Files\Android\Projects\HappyPlaces\app\src\main\cpp\CMakeLists.txt
