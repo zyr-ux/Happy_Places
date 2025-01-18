@@ -35,6 +35,12 @@ android {
         jvmTarget = "11"
     }
 
+    externalNativeBuild {
+        cmake{
+            path = file("src/main/cpp/CMakeLists.txt")
+        }
+    }
+
     buildFeatures{
         viewBinding = true
     }

@@ -43,12 +43,12 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b92f83fd-675f-4903-a2dc-9172a8028a47" name="Changes" comment="Added a new View on Map functionality!!">
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/btn_ripple_grey.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/textview_border.xml" afterDir="false" />
+    <list default="true" id="b92f83fd-675f-4903-a2dc-9172a8028a47" name="Changes" comment="nothing">
+      <change afterPath="$PROJECT_DIR$/app/src/main/cpp/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/cpp/native-lib.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/happyplaces/activities/MapActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/happyplaces/activities/MapActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_add_happy_places.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_add_happy_places.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/happyplaces/activities/AddHappyPlacesActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/happyplaces/activities/AddHappyPlacesActivity.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,8 +112,9 @@
         <option value="Kotlin Data Class" />
         <option value="Kotlin Interface" />
         <option value="layoutResourceFile" />
-        <option value="Kotlin Class" />
         <option value="resourceFile" />
+        <option value="Kotlin Class" />
+        <option value="CMakeLists.txt" />
       </list>
     </option>
   </component>
@@ -165,7 +166,7 @@
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "E:/Files/Android/Projects/7MinuteWorkout",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
+    "settings.editor.selected.configurable": "AndroidSdkUpdater"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -497,7 +498,23 @@
       <option name="project" value="LOCAL" />
       <updated>1737199549818</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Added a way to use the user's current location!">
+      <option name="closed" value="true" />
+      <created>1737216428036</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1737216428036</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Added a way to use the user's current location!">
+      <option name="closed" value="true" />
+      <created>1737216487929</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1737216487929</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -518,7 +535,6 @@
     <MESSAGE value="idk man" />
     <MESSAGE value="fixed a small issue in main activity layout" />
     <MESSAGE value="Fixed major bug that was preventing items at position 10 to not be able to get swiped" />
-    <MESSAGE value="nothing" />
     <MESSAGE value="minor stuff" />
     <MESSAGE value="Fixed major bug relating to how editing entries were being handled" />
     <MESSAGE value="adding Google Places" />
@@ -530,19 +546,21 @@
     <MESSAGE value="idk" />
     <MESSAGE value="adding new stuff" />
     <MESSAGE value="Added a new View on Map functionality!!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a new View on Map functionality!!" />
+    <MESSAGE value="Added a way to use the user's current location!" />
+    <MESSAGE value="nothing" />
+    <option name="LAST_COMMIT_MESSAGE" value="nothing" />
   </component>
   <component name="play_dynamic_filters_status">
     <option name="appIdToCheckInfo">
       <map>
         <entry key="com.example.happyplaces">
           <value>
-            <CheckInfo lastCheckTimestamp="1737123675150" />
+            <CheckInfo lastCheckTimestamp="1737214472683" />
           </value>
         </entry>
         <entry key="com.example.happyplaces.test">
           <value>
-            <CheckInfo lastCheckTimestamp="1737123675150" />
+            <CheckInfo lastCheckTimestamp="1737214472682" />
           </value>
         </entry>
       </map>

@@ -113,7 +113,7 @@ class AddHappyPlacesActivity : AppCompatActivity(), View.OnClickListener
             }
         }
         if(!Places.isInitialized()){
-            Places.initialize(this@AddHappyPlacesActivity,resources.getString(R.string.google_maps_api_key))
+            Places.initialize(this@AddHappyPlacesActivity,Keys.getApi())
         }
         mFusedLocationClient=LocationServices.getFusedLocationProviderClient(this)
     }
@@ -485,6 +485,14 @@ class AddHappyPlacesActivity : AppCompatActivity(), View.OnClickListener
         private const val CAMERA = 2
         private const val IMAGE_DIRECTORY = "HappyPlacesImages"
         private const val PLACE_AUTOCOMPLETE_REQUEST_CODE=3
+    }
+
+    object Keys
+    {
+        init {
+            System.loadLibrary("native-lib")
+        }
+        external fun getApi():String
     }
     
 }
