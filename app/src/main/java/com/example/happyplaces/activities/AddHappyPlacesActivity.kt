@@ -358,7 +358,8 @@ class AddHappyPlacesActivity : AppCompatActivity(), View.OnClickListener
                     Toast.makeText(this, "Image capture failed", Toast.LENGTH_SHORT).show()
                 }
             }
-            else if (requestCode == PLACE_AUTOCOMPLETE_REQUEST_CODE){
+            else if (requestCode == PLACE_AUTOCOMPLETE_REQUEST_CODE)
+            {
                 val place:Place=Autocomplete.getPlaceFromIntent(data!!)
                 binding?.locationEt?.setText(place.formattedAddress)
                 latittude=place.location.latitude
