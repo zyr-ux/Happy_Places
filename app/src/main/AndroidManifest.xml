@@ -37,8 +37,17 @@
             android:value="@string/google_maps_api_key" />
 
         <activity
+            android:name=".activities.MapActivity"
+            android:exported="false"
+            android:label="Happy Place Map"
+            android:screenOrientation="portrait"/>
+
+
+        <activity
             android:name=".activities.HappyPlaceDetailsActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Happy Place Details"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".activities.AddHappyPlacesActivity"
             android:exported="false"

@@ -22,6 +22,11 @@
           <theme>@style/Theme.HappyPlaces</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_map.xml">
+        <config>
+          <theme>@style/Theme.HappyPlaces</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/rv_item_view.xml">
         <config>
           <theme>@style/Theme.HappyPlaces</theme>
@@ -39,7 +44,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b92f83fd-675f-4903-a2dc-9172a8028a47" name="Changes" comment="idk">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/happyplaces/activities/MapActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_map.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/happyplaces/activities/HappyPlaceDetailsActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/happyplaces/activities/HappyPlaceDetailsActivity.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,7 +60,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=PhysicalDevice, isTemplate=false, identifier=serial=4e84ac2)]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -168,6 +178,9 @@
       <recent name="com.example.happyplaces" />
     </key>
     <key name="android.template.-1957591288">
+      <recent name="com.example.happyplaces.activities" />
+    </key>
+    <key name="android.template.1695088842">
       <recent name="com.example.happyplaces.activities" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
@@ -462,7 +475,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736886693344</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="idk">
+      <option name="closed" value="true" />
+      <created>1737123691408</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1737123691408</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -500,12 +521,12 @@
       <map>
         <entry key="com.example.happyplaces">
           <value>
-            <CheckInfo lastCheckTimestamp="1736873110424" />
+            <CheckInfo lastCheckTimestamp="1737123675150" />
           </value>
         </entry>
         <entry key="com.example.happyplaces.test">
           <value>
-            <CheckInfo lastCheckTimestamp="1736873110417" />
+            <CheckInfo lastCheckTimestamp="1737123675150" />
           </value>
         </entry>
       </map>

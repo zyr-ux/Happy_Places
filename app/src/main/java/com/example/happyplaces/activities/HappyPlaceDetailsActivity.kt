@@ -1,5 +1,6 @@
 package com.example.happyplaces.activities
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.enableEdgeToEdge
@@ -41,6 +42,12 @@ class HappyPlaceDetailsActivity : AppCompatActivity()
                 happyPlacesDetails(it)
             }
         }
+        binding?.happyPlaceLocation?.setOnClickListener{
+            val intent=Intent(this,MapActivity::class.java)
+            intent.putExtra("Entity ID",id)
+            startActivity(intent)
+        }
+
     }
 
     private fun actionBar()
@@ -69,7 +76,7 @@ class HappyPlaceDetailsActivity : AppCompatActivity()
         Glide.with(this@HappyPlaceDetailsActivity)
             .load(imgfile)
             .into(binding!!.happyPlaceIMG)
-        //binding?.happyPlaceIMG?.setImageURI(Uri.parse(happyPlaceEntity.img))
+//      binding?.happyPlaceIMG?.setImageURI(Uri.parse(happyPlaceEntity.img))
         binding?.happyPlaceDesc?.setText(happyPlaceEntity.description)
         binding?.happyPlaceLocation?.setText(happyPlaceEntity.location)
     }
