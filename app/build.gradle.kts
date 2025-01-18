@@ -41,7 +41,7 @@ android {
 }
 
 dependencies {
-    implementation("de.hdodenhof:circleimageview:3.1.0")
+    implementation("de.hdodenhof:circleimageview:3.1.0") //Dexter dependency
     implementation("com.karumi:dexter:6.2.3")
 
     implementation("androidx.room:room-runtime:2.6.1") // Replace with the latest version
@@ -54,7 +54,9 @@ dependencies {
 
     implementation("com.google.android.libraries.places:places:4.1.0") //Places dependency
 
-    implementation(libs.play.services.maps)
+    implementation("com.google.android.gms:play-services-location:21.3.0") //GMS Location dependency
+    implementation(libs.play.services.maps) // Maps dependency
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)

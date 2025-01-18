@@ -1,6 +1,8 @@
 package com.example.happyplaces.activities
 
+import com.example.happyplaces.utils.LocationAddressConverter
 import android.Manifest
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.ActivityNotFoundException
 import android.content.Context
@@ -8,10 +10,13 @@ import android.content.ContextWrapper
 import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
+import android.location.Location
+import android.location.LocationManager
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.os.Environment
+import android.os.Looper
 import android.provider.MediaStore
 import android.provider.Settings
 import android.util.Log
@@ -44,6 +49,12 @@ import java.util.Date
 import java.util.Locale
 import java.util.UUID
 import com.example.happyplaces.database.*
+import com.google.android.gms.location.FusedLocationProviderClient
+import com.google.android.gms.location.LocationCallback
+import com.google.android.gms.location.LocationRequest
+import com.google.android.gms.location.LocationResult
+import com.google.android.gms.location.LocationServices
+import com.google.android.gms.location.Priority
 import com.google.android.libraries.places.api.Places
 import com.google.android.libraries.places.api.model.Place
 import com.google.android.libraries.places.widget.Autocomplete
@@ -62,6 +73,7 @@ class AddHappyPlacesActivity : AppCompatActivity(), View.OnClickListener
     private lateinit var happyPlacesdao:HappyPlacesDao
     private var id:Int?=null
     private var editmode:Boolean?=false
+    private lateinit var mFusedLocationClient:FusedLocationProviderClient
 
     override fun onCreate(savedInstanceState: Bundle?)
     {
@@ -77,11 +89,11 @@ class AddHappyPlacesActivity : AppCompatActivity(), View.OnClickListener
             }
         }
         actionBar()
-        defaultView()
         happyPlacesdao = (application as HappyPlacesApp).db.happyPlacesDao()
         binding?.dateEt?.setOnClickListener(this)
         binding?.addImg?.setOnClickListener(this)
         binding?.locationEt?.setOnClickListener(this)
+        binding?.addCurrentLocationBtn?.setOnClickListener(this)
         if (intent.hasExtra("ID")) {
             editmode=true
             id = intent.getIntExtra("ID", 0)
@@ -94,6 +106,7 @@ class AddHappyPlacesActivity : AppCompatActivity(), View.OnClickListener
             }
         }
         if(editmode==false){
+            defaultView()
             binding?.saveBtn?.setOnClickListener {
                 addHappyPlace(happyPlacesdao)
                 finish()
@@ -102,6 +115,7 @@ class AddHappyPlacesActivity : AppCompatActivity(), View.OnClickListener
         if(!Places.isInitialized()){
             Places.initialize(this@AddHappyPlacesActivity,resources.getString(R.string.google_maps_api_key))
         }
+        mFusedLocationClient=LocationServices.getFusedLocationProviderClient(this)
     }
 
     private fun onEdit(id:Int,happyPlaceEntity: HappyPlaceEntity,happyPlacesDao: HappyPlacesDao)
@@ -217,7 +231,45 @@ class AddHappyPlacesActivity : AppCompatActivity(), View.OnClickListener
                     e.printStackTrace()
                 }
             }
+            R.id.add_current_location_btn-> {
+                if(!isLocationEnabled()){
+                    Toast.makeText(this,"Enable Location",Toast.LENGTH_SHORT).show()
+                    val intent=Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS)
+                    startActivity(intent)
+                }
+                else {
+                    addLocation()
+                }
+            }
         }
+    }
+
+    private fun isLocationEnabled():Boolean
+    {
+        val locationManager:LocationManager=getSystemService(Context.LOCATION_SERVICE) as LocationManager
+        return locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER) || locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER)
+    }
+
+    private fun addLocation()
+    {
+        Dexter.withContext(this).withPermissions(
+            Manifest.permission.ACCESS_FINE_LOCATION,
+            Manifest.permission.ACCESS_COARSE_LOCATION
+        )
+            .withListener(object : MultiplePermissionsListener {
+                override fun onPermissionsChecked(report: MultiplePermissionsReport?) {
+                    if(report!!.areAllPermissionsGranted()){
+                        requestLocation()
+                    }
+                }
+
+                override fun onPermissionRationaleShouldBeShown(
+                    p0: MutableList<PermissionRequest>?,
+                    p1: PermissionToken?
+                ) {
+                    showRationalDialogueForPermissions()
+                }
+            }).onSameThread().check()
     }
 
     private fun addImagefromGallery()
@@ -395,10 +447,36 @@ class AddHappyPlacesActivity : AppCompatActivity(), View.OnClickListener
             Toast.makeText(applicationContext,"Fill out the details",Toast.LENGTH_SHORT).show()
     }
 
+    @SuppressLint("MissingPermission")
+    private fun requestLocation()
+    {
+        var mLocationRequest=LocationRequest.Builder(Priority.PRIORITY_HIGH_ACCURACY,1000)
+            .setMaxUpdates(1)
+            .build()
+        mFusedLocationClient.requestLocationUpdates(mLocationRequest,mLocationCallback, Looper.myLooper())
+    }
+
+    private val mLocationCallback= object : LocationCallback()
+    {
+        override fun onLocationResult(locationResult: LocationResult) {
+            val mLastLocation: Location? = locationResult.lastLocation
+            latittude=mLastLocation!!.latitude
+            longitude= mLastLocation.longitude
+            Log.e("Lat","$latittude")
+            Log.e("Long","$longitude")
+            val convertedLocation= LocationAddressConverter(this@AddHappyPlacesActivity)
+            lifecycleScope.launch {
+                val newloc=convertedLocation.getFormattedAddress(latittude,longitude)
+                Log.e("Location","$newloc")
+                binding?.locationEt?.setText(newloc)
+            }
+        }
+    }
+
     override fun onDestroy()
     {
-        super.onDestroy()
         binding=null
+        super.onDestroy()
     }
 
     companion object

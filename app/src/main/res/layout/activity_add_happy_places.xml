@@ -158,7 +158,7 @@
         app:layout_constraintHorizontal_bias="0.075"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.097">
+        app:layout_constraintVertical_bias="0.408">
 
         <ImageView
             android:id="@+id/addedimgbox"
@@ -175,13 +175,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="ADD IMAGE"
-        android:textSize="18sp"
         android:textColor="@color/colorAccent"
+        android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/img_btn_fl"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/img_btn_fl"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/add_current_location_btn" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/save_btn"
@@ -196,5 +196,30 @@
         android:text="SAVE"
         android:textColor="@color/white"
         android:background="@color/colorPrimaryDark"/>
+
+
+    <FrameLayout
+        android:id="@+id/add_current_location_btn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/img_btn_fl"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.352"
+        android:background="@drawable/btn_ripple_grey"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Add Current Location"
+            android:textAlignment="center"
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

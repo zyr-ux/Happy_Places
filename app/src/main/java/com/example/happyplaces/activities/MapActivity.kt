@@ -79,5 +79,4 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback
         val latlngZoom= CameraUpdateFactory.newLatLngZoom(position,13f)
         maps.animateCamera(latlngZoom)
     }
-
 }
