@@ -15,7 +15,7 @@ Welcome to **Happy Places**, an app designed to help you remember and cherish al
 
 ### Prerequisites
 - **Mobile Device**: Android 10.0+
-- **Internet Connection**: Required for map features and cloud backup.
+- **Internet Connection**: Required for map features.
 
 ---
 
