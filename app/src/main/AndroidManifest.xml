@@ -43,7 +43,6 @@
             android:label="Happy Place Map"
             android:screenOrientation="portrait"/>
 
-
         <activity
             android:name=".activities.HappyPlaceDetailsActivity"
             android:exported="false"

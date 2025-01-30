@@ -44,7 +44,6 @@ class MainActivity : AppCompatActivity()
         lifecycleScope.launch {
             happyPlacesdao.fetchAllHappyPlaces().collect{ list ->
                 val list=ArrayList(list)
-
                 setupDataintoRV(list)
             }
         }
